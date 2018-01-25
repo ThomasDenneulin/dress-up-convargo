@@ -4,19 +4,20 @@
 (() => {
   const render = (actors) => {
     const fragment = document.createDocumentFragment();
-    const div = document.createElement('div');
+    const ul = document.createElement('ul');
+    ul.className = "list-group col-md-5";
     const template = actors.map(actor => {
       return `
-        <div class="actor">
+        <li class="actor list-group-item">
           <span>${actor.who}</span>
           <span>${actor.type}</span>
           <span>${actor.amount}</span>
-        </div>
+        </li>
       `;
     }).join('');
 
-    div.innerHTML = template;
-    fragment.appendChild(div);
+    ul.innerHTML = template;
+    fragment.appendChild(ul);
     document.querySelector('#actors').innerHTML = '';
     document.querySelector('#actors').appendChild(fragment);
   };
