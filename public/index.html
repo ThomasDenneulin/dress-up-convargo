@@ -1,23 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CSS/HTML Workshop with Convargo</title>
-  </head>
-  <body>
-    <div id="trucker">
-      <input class="name" type="text" placeholder="Trucker name"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>
+
+<head>
+  <title>CSS/HTML Workshop with Convargo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3"> Welcome to my styled page ! </h1>
+      <p class="lead">This is my styled convargo page using Bootstrap.</p>
+
+      <div id="trucker">
+        <p class="lead">Speak about the trucker...</p>
+        <div class="row">
+          <div class="input-group col-md-3">
+            <span class="input-group-addon" id="basic-addon1">?</span>
+            <input class="name form-control" type="text" placeholder="Trucker name" />
+          </div>
+
+          <div class="input-group col-md-3">
+            <span class="input-group-addon" id="basic-addon1">$/km</span>
+            <input class="price-by-km form-control" type="number" placeholder="Price by km" />
+          </div>
+          <div class="input-group col-md-3">
+            <span class="input-group-addon" id="basic-addon1">$/m3</span>
+            <input class="price-by-cubic form-control" type="number" placeholder="Price by m3" />
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div id="shipper">
+        <p class="lead">Speak about the shipper...</p>
+
+        <div class="row">
+          <div class="input-group col-md-3">
+            <span class="input-group-addon" id="basic-addon1">?</span>
+            <input class="name form-control" type="text" placeholder="Shipper name" />
+          </div>
+
+          <div class="input-group col-md-3">
+            <span class="input-group-addon" id="basic-addon1">km</span>
+            <input class="distance form-control" type="number" placeholder="Distance in km" />
+          </div>
+          <div class="input-group col-md-3">
+            <span class="input-group-addon" id="basic-addon1">m3</span>
+            <input class="volume form-control" type="number" placeholder="Volume in m3" />
+          </div>
+            <label class = "control-label">Deductible option</label>
+            <input class="option" type="checkbox" placeholder="Deductible option" style = "margin-left : 10px"/>
+        </div>
+      </div>
+
+      <br>
+      <button type = "button"  class = "btn btn-secondary" id="compute">Compute</button>
+      <div id="actors"></div>
     </div>
-    <div id="shipper">
-      <input class="name" type="text" placeholder="Shipper name"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="volume" type="number" placeholder="Volume in m3"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="convargo.js"></script>
-    <script src="index.js"></script>
-  </body>
+  </div>
+  <script src="convargo.js"></script>
+  <script src="index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
